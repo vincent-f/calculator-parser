@@ -1,6 +1,5 @@
 package com.example.calculator.token;
 
-import com.example.calculator.state.MaybeMultOpState;
 import com.example.calculator.state.MultiplicationState;
 
 public class Times extends TailedTokenList {
@@ -10,7 +9,7 @@ public class Times extends TailedTokenList {
     }
 
     @Override
-    public MaybeMultOpState multiplicativeOperator(int forwardedFactor) {
+    public MultiplicationState multiplicativeOperator(int forwardedFactor) {
         return new MultiplicationState(forwardedFactor, next);
     }
 }

@@ -1,7 +1,6 @@
 package com.example.calculator.token;
 
 import com.example.calculator.state.DivisionState;
-import com.example.calculator.state.MaybeMultOpState;
 
 public class Divide extends TailedTokenList {
 
@@ -10,7 +9,7 @@ public class Divide extends TailedTokenList {
     }
 
     @Override
-    public MaybeMultOpState multiplicativeOperator(int forwardedDividend) {
+    public DivisionState multiplicativeOperator(int forwardedDividend) {
         return new DivisionState(forwardedDividend, next);
     }
 }

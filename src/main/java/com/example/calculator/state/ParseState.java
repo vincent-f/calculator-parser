@@ -13,22 +13,22 @@ public class ParseState implements MaybeParseState, MaybeMultOpState, MaybeAddOp
     }
 
     @Override
-    public MaybeParseState add(int term) {
+    public ParseState add(int term) {
         return new ParseState(term + value, next);
     }
 
     @Override
-    public MaybeParseState subtract(int term) {
+    public ParseState subtract(int term) {
         return new ParseState(term - value, next);
     }
 
     @Override
-    public MaybeParseState multiply(int factor) {
+    public ParseState multiply(int factor) {
         return new ParseState(factor * value, next);
     }
 
     @Override
-    public MaybeParseState divide(int dividend) {
+    public ParseState divide(int dividend) {
         return new ParseState(dividend / value, next);
     }
 
@@ -48,7 +48,7 @@ public class ParseState implements MaybeParseState, MaybeMultOpState, MaybeAddOp
     }
 
     @Override
-    public MaybeParseState parseTerm() {
+    public ParseState parseTerm() {
         return this;
     }
 
@@ -58,7 +58,7 @@ public class ParseState implements MaybeParseState, MaybeMultOpState, MaybeAddOp
     }
 
     @Override
-    public MaybeParseState parseExpression() {
+    public ParseState parseExpression() {
         return this;
     }
 }

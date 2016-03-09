@@ -1,7 +1,6 @@
 package com.example.calculator.token;
 
 import com.example.calculator.state.MaybeParseState;
-import com.example.calculator.state.MaybeValidState;
 import com.example.calculator.state.ValidState;
 
 public class LParenthesis extends TailedTokenList {
@@ -16,7 +15,7 @@ public class LParenthesis extends TailedTokenList {
     }
 
     @Override
-    public MaybeValidState leftParenthesis() {
+    public ValidState leftParenthesis() {
         return new ValidState(next);
     }
 }

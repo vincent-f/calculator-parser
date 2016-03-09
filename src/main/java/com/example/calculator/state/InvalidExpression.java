@@ -5,42 +5,42 @@ public class InvalidExpression implements MaybeParseState, MaybeValidState, Mayb
     public InvalidExpression() {}
 
     @Override
-    public MaybeParseState add(int term) {
+    public InvalidExpression add(int term) {
         return this;
     }
 
     @Override
-    public MaybeParseState subtract(int term) {
+    public InvalidExpression subtract(int term) {
         return this;
     }
 
     @Override
-    public MaybeParseState multiply(int factor) {
+    public InvalidExpression multiply(int factor) {
         return this;
     }
 
     @Override
-    public MaybeParseState divide(int dividend) {
+    public InvalidExpression divide(int dividend) {
         return this;
     }
 
     @Override
-    public MaybeValue parseEndOfFile() {
+    public InvalidExpression parseEndOfFile() {
         return this;
     }
 
     @Override
-    public MaybeParseState parseRParenthesis() {
+    public InvalidExpression parseRParenthesis() {
         return this;
     }
 
     @Override
-    public MaybeMultOpState parseMultiplicativeOperator() {
+    public InvalidExpression parseMultiplicativeOperator() {
         return this;
     }
 
     @Override
-    public MaybeAddOpState parseAdditiveOperator() {
+    public InvalidExpression parseAdditiveOperator() {
         return this;
     }
 
@@ -50,12 +50,12 @@ public class InvalidExpression implements MaybeParseState, MaybeValidState, Mayb
     }
 
     @Override
-    public MaybeParseState parseExpression() {
+    public InvalidExpression parseExpression() {
         return this;
     }
 
     @Override
-    public MaybeParseState parseTerm() {
+    public InvalidExpression parseTerm() {
         return this;
     }
 }

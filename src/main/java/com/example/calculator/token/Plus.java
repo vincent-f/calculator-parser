@@ -1,7 +1,6 @@
 package com.example.calculator.token;
 
 import com.example.calculator.state.AdditionState;
-import com.example.calculator.state.MaybeAddOpState;
 
 public class Plus extends TailedTokenList {
 
@@ -10,7 +9,7 @@ public class Plus extends TailedTokenList {
     }
 
     @Override
-    public MaybeAddOpState additiveOperator(int forwardedTerm) {
+    public AdditionState additiveOperator(int forwardedTerm) {
         return new AdditionState(forwardedTerm, next);
     }
 }

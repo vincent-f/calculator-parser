@@ -1,6 +1,5 @@
 package com.example.calculator.token;
 
-import com.example.calculator.state.MaybeParseState;
 import com.example.calculator.state.ParseState;
 
 public class Number extends TailedTokenList {
@@ -13,7 +12,7 @@ public class Number extends TailedTokenList {
     }
 
     @Override
-    public MaybeParseState factor() {
+    public ParseState factor() {
         return new ParseState(value, next);
     }
 }
