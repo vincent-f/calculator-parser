@@ -12,4 +12,4 @@ We see:
  - no global state
  - only stateless classes
 
-Explanations [here](https://vincentfabro.blogspot.be/)
+Explanations [here](https://vincentfabro.blogspot.be/2016/03/parsing-object-oriented-way-make-your.html)
