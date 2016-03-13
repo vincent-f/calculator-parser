@@ -6,7 +6,7 @@ public class AbstractTokenList implements TokenList {
 
     @Override
     public MaybeValue input() {
-        return expression().parseEndOfFile();
+        return expression().endOfFile();
     }
 
     @Override
@@ -16,12 +16,12 @@ public class AbstractTokenList implements TokenList {
 
     @Override
     public MaybeParseState expression() {
-        return term().parseAdditiveOperator().parseExpression();
+        return term().additiveOperator().expression();
     }
 
     @Override
     public MaybeParseState term() {
-        return factor().parseMultiplicativeOperator().parseTerm();
+        return factor().multiplicativeOperator().term();
     }
 
     @Override
@@ -31,7 +31,7 @@ public class AbstractTokenList implements TokenList {
 
     @Override
     public MaybeParseState parenthesizedExpression() {
-        return leftParenthesis().parseExpression().parseRParenthesis();
+        return leftParenthesis().expression().rightParenthesis();
     }
 
     @Override

@@ -13,7 +13,7 @@ public class MultiplicationState implements MaybeMultOpState {
     }
 
     @Override
-    public MaybeParseState parseTerm() {
+    public MaybeParseState term() {
         return next
                 .term()
                 .multiply(leftFactor);

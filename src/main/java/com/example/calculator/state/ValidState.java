@@ -11,7 +11,7 @@ public class ValidState implements MaybeValidState {
     }
 
     @Override
-    public MaybeParseState parseExpression() {
+    public MaybeParseState expression() {
         return next.expression();
     }
 }

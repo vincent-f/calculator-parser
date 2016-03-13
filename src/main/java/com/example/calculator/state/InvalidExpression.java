@@ -25,22 +25,22 @@ public class InvalidExpression implements MaybeParseState, MaybeValidState, Mayb
     }
 
     @Override
-    public InvalidExpression parseEndOfFile() {
+    public InvalidExpression endOfFile() {
         return this;
     }
 
     @Override
-    public InvalidExpression parseRParenthesis() {
+    public InvalidExpression rightParenthesis() {
         return this;
     }
 
     @Override
-    public InvalidExpression parseMultiplicativeOperator() {
+    public InvalidExpression multiplicativeOperator() {
         return this;
     }
 
     @Override
-    public InvalidExpression parseAdditiveOperator() {
+    public InvalidExpression additiveOperator() {
         return this;
     }
 
@@ -50,12 +50,12 @@ public class InvalidExpression implements MaybeParseState, MaybeValidState, Mayb
     }
 
     @Override
-    public InvalidExpression parseExpression() {
+    public InvalidExpression expression() {
         return this;
     }
 
     @Override
-    public InvalidExpression parseTerm() {
+    public InvalidExpression term() {
         return this;
     }
 }

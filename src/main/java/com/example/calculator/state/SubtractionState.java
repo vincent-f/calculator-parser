@@ -12,7 +12,7 @@ public class SubtractionState implements MaybeAddOpState {
         this.next = next;
     }
     @Override
-    public MaybeParseState parseExpression() {
+    public MaybeParseState expression() {
         return next
                 .expression()
                 .subtract(leftTerm);

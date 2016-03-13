@@ -4,7 +4,7 @@ import com.example.calculator.state.ParseState;
 
 public class Number extends TailedTokenList {
 
-    private final int value;
+    public final int value;
 
     public Number(TokenList next, int value) {
         super(next);

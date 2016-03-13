@@ -10,11 +10,11 @@ public interface MaybeParseState {
 
     MaybeParseState divide(int dividend);
 
-    MaybeValue parseEndOfFile();
+    MaybeValue endOfFile();
 
-    MaybeParseState parseRParenthesis();
+    MaybeParseState rightParenthesis();
 
-    MaybeMultOpState parseMultiplicativeOperator();
+    MaybeMultOpState multiplicativeOperator();
 
-    MaybeAddOpState parseAdditiveOperator();
+    MaybeAddOpState additiveOperator();
 }

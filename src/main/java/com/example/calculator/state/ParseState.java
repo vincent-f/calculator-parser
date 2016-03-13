@@ -33,32 +33,32 @@ public class ParseState implements MaybeParseState, MaybeMultOpState, MaybeAddOp
     }
 
     @Override
-    public MaybeValue parseEndOfFile() {
+    public MaybeValue endOfFile() {
         return next.endOfFile(value);
     }
 
     @Override
-    public MaybeParseState parseRParenthesis() {
+    public MaybeParseState rightParenthesis() {
         return next.rightParenthesis(value);
     }
 
     @Override
-    public MaybeMultOpState parseMultiplicativeOperator() {
+    public MaybeMultOpState multiplicativeOperator() {
         return next.multiplicativeOperator(value);
     }
 
     @Override
-    public ParseState parseTerm() {
+    public ParseState term() {
         return this;
     }
 
     @Override
-    public MaybeAddOpState parseAdditiveOperator() {
+    public MaybeAddOpState additiveOperator() {
         return next.additiveOperator(value);
     }
 
     @Override
-    public ParseState parseExpression() {
+    public ParseState expression() {
         return this;
     }
 }

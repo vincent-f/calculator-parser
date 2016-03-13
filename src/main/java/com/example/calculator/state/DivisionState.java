@@ -13,7 +13,7 @@ public class DivisionState implements MaybeMultOpState {
     }
 
     @Override
-    public MaybeParseState parseTerm() {
+    public MaybeParseState term() {
         return next
                 .term()
                 .divide(dividend);
