@@ -54,7 +54,7 @@ public class TokenStreamImpl implements TokenStream {
 	}
 
 	private int getIntValue() {
-		StringBuilder builder = new StringBuilder();
+		var builder = new StringBuilder();
 		do
 			builder.append(cs.getNext());
 		while (cs.hasNext() && isDigit(cs.getLookahead()));
